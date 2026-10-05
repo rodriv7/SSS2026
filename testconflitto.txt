@@ -1,1 +1,4 @@
 Modifica alternativa su master
+Modifica fatta dal branch secondario
+Versione finale senza conflitto
+
