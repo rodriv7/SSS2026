@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercitazione Docker - UniGe DIBRIS</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #1e1e2e; color: #cdd6f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background-color: #313244; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); width: 320px; text-align: center; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { width: 96%; padding: 10px; background-color: #89b4fa; color: #11111b; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #b4befe; }
+        #messaggio { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Docker Webserver</h2>
+        <p>Esercitazione Strumenti di Sviluppo Software</p>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Accedi</button>
+        </form>
+        <div id="messaggio"></div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const user = document.getElementById('username').value;
+            const msg = document.getElementById('messaggio');
+            msg.style.color = '#a6e3a1';
+            msg.innerText = 'Benvenuto a bordo del container, ' + user + '!';
+        });
+    </script>
+</body>
+</html>
